@@ -1,1 +1,7 @@
-Sensors.AFRICA SeasSensors.map
+# sensors.AFRICA MAP
+
+## Development
+
+## Style Guidelines
+
+## Deployment
