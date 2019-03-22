@@ -1,4 +1,4 @@
-# sensors.AFRICA MAP
+# sensors.AFRICA SeaSensors-Map
 
 ## Development
 
