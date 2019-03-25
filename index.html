@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Interactive mapping with MapBox GL JS</title>
+    <meta charset="utf-8" />
+    <title>Points on a map</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js"></script>
     <link
       href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css"
       rel="stylesheet"
     />
-    <link href="style.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Map container-->
     <div id="map"></div>
 
-    <!-- Information Box-->
-    <div class="map-overlay" id="features">
-      <h2>Sensors.Africa SeaSensors Map</h2>
-      <div id="pd"><p>Map is located below this text</p></div>
-    </div>
-    <!-- Legend-->
-    <div class="map-overlay" id="legend"></div>
+    <script>
+      //Add access token and map style url
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoibmVyZGxldCIsImEiOiJjanRvY290N3cwODEyNDlxdDlvbjk4bm9oIn0.7kfXS9B5QBsnoIeX2k0V0w"; // replace this with your access token
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/nerdlet/cjto8u87b1dmu1fpxk0va5xii" // replace this with your style URL
+      });
+    </script>
   </body>
 </html>
