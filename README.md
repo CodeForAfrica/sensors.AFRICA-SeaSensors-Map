@@ -3,12 +3,14 @@
 Sea Sensors is an acoustic data project that falls under the sensors.AFRICA umbrella.
 
 The project uses hydrophone sensors submerged underwater at locations off Tanzania’s coast that record underwater sounds,
-including dynamite blasts, and is expected to record this information over the course of an entire year.sensors.AFRICA SeaSensors-map project is expected to present this data in a visually appealing interactive map
-Our primary goal is to be able to have a map that:
+including dynamite blasts, and is expected to record this information over the course of an entire year.
+The sensors.AFRICA-SeaSensors-map project is expected to present this data in a visually appealing interactive map.
 
-1. Shows the geographic locations of blast where availble , and where not available, showcase the bearing to the blast (as lines originating from the detector.
-2. Show blast locations to be color coded and filtered according to month, season, time of day (morning, afternoon, night), tidal state etc
-3. Generate graphs of number of blasts detected according to different criteria: (month, period of day, tidal state etc)
-4. Allow users to play sounds of the explosions with a play button
+Our primary goal for the map is to:
+
+1. Show physical locations(geolocation) of the sennsors deployed on the map.
+2. Shows the geographic locations of blast where availble , and where not available, showcase the bearing to the blast (as lines originating from the detector).
+3. Show a counter that gives a summary of the blast detected according to time, day, today state etc
+4. Allow users to view a timeseries of the data and to to play, pause or toggle sounds of the explosions.
 
 ## Development
