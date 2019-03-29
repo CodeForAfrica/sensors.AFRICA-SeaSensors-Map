@@ -1,0 +1,13 @@
+/**Define map width in order for the map to show on the page*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
