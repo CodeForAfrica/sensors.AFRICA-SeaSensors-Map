@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("//Add public access token and map style url\nmapboxgl.accessToken = \"pk.eyJ1IjoibmVyZGxldCIsImEiOiJjanRvY290N3cwODEyNDlxdDlvbjk4bm9oIn0.7kfXS9B5QBsnoIeX2k0V0w\";\nvar map = new mapboxgl.Map({\n  container: \"map\",\n  style: \"mapbox://styles/nerdlet/cjtqwfs0a1de61fm3e607d56m\"\n});\n\n//# sourceURL=webpack:///./src/js/main.js?");
+eval("//Add public access token and map style url\nmapboxgl.accessToken = \"pk.eyJ1IjoiY29kZWZvcmFmcmljYSIsImEiOiJzbUlkVDRNIn0.JUlW50UqJRZ3em2BKUBJIg\";\nvar map = new mapboxgl.Map({\n  container: \"map\",\n  style: \"mapbox://styles/codeforafrica/cju18pxjf12yj1gp7qhdmgicd\"\n});\n\n//# sourceURL=webpack:///./src/js/main.js?");
 
 /***/ }),
 
