@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "public"),
     publicPath: "assets/",
-    filename: "js/bundle.js"
+    filename: "assets/js/bundle.js"
   },
   module: {
     rules: [
