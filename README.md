@@ -14,3 +14,11 @@ Our primary goal of the map is to:
 4. Allow users to view a timeseries of the data and to play, pause or toggle sounds of the explosions.
 
 ## Development
+
+Run the following commands to get started:
+
+```
+  yarn
+  yarn build
+  yarn dev
+```
