@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> feature/update-tokens
 ### Node ###
 # Logs
 logs
@@ -15,5 +18,9 @@ lerna-debug.log*
 public/assets/js/bundle.js
 
 # Dependency directories
+<<<<<<< HEAD
 node_modules/
 
+=======
+node_modules/
+>>>>>>> feature/update-tokens
