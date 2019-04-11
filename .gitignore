@@ -1,5 +1,17 @@
-.DS_Store
-node_modules/
+### Node ###
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
-#compiled files
+#Mac OS
+.DS_Store
+
+# compiled files
 public/assets/js/bundle.js
+
+# Dependency directories
+node_modules/
