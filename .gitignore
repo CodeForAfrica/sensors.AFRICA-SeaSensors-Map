@@ -12,7 +12,7 @@ lerna-debug.log*
 .DS_Store
 
 # compiled files
-*/*/build.js
+public/assets/js/bundle.js
 
 # Dependency directories
 node_modules/
