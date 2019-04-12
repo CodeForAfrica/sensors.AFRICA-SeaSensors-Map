@@ -26,13 +26,14 @@ const addToMap = [turf.point(center), circle];
 
 //calculate bearing
 function bearing() {
-  const distance = 30;
+  const distance = 30; 
   const bearing = [data.features.properties.blastBearings];
   for (const i = 0; i < center.length; i++) {
-    var options: { units: "kilometers" };
+    const option: { units:  "kilometers" };
   }
-  var destination = turf.destination(point, distance, bearing, option);
+  const destination = turf.destination(point, distance, bearing, option);
 }
+
 
 map.on("load", function() {
   map.addLayer({
