@@ -9,6 +9,31 @@ var map = new mapboxgl.Map({
   zoom: 8.7
 });
 
+//Calculate circleRadius
+function circleRadius() {
+  const center = [data.features.geometry.coordinates];
+  const radius = 30;
+  for (const i = 0; i < center.length; i++) {
+    const options = {
+      steps: 10,
+      units: "kilometers",
+      properties: {}
+    };
+    const circle = turf.circle(center, radius, options);
+  }
+}
+const addToMap = [turf.point(center), circle];
+
+//calculate bearing
+function bearing() {
+  const distance = 30;
+  const bearing = [data.features.properties.blastBearings];
+  for (const i = 0; i < center.length; i++) {
+    var options: { units: "kilometers" };
+  }
+  var destination = turf.destination(point, distance, bearing, option);
+}
+
 map.on("load", function() {
   map.addLayer({
     id: "points",
@@ -387,18 +412,3 @@ map.on("load", function() {
     }
   });
 });
-
-//Calculate circleRadius
-function circleRadius() {
-  const center = [data.features.geometry.coordinates];
-  const radius = 30;
-  for (const i = 0; i < center.length; i++) {
-    const options = {
-      steps: 10,
-      units: "kilometers",
-      properties: {}
-    };
-    const circle = turf.circle(center, radius, options);
-  }
-}
-var addToMap = [turf.point(center), circle];
