@@ -382,11 +382,23 @@ map.on("load", function() {
       }
     },
     layout: {},
-    paint: { "circle-color": "red" }
+    paint: {
+      "circle-color": "red"
+    }
   });
 });
 
-//Calculate bearings
-function calculateBearings() {}
-
-function circleRadius() {}
+//Calculate circleRadius
+function circleRadius() {
+  const center = [data.features.geometry.coordinates];
+  const radius = 30;
+  for (const i = 0; i < center.length; i++) {
+    const options = {
+      steps: 10,
+      units: "kilometers",
+      properties: {}
+    };
+    const circle = turf.circle(center, radius, options);
+  }
+}
+var addToMap = [turf.point(center), circle];
