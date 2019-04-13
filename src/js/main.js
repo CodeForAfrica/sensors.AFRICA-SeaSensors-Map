@@ -9,34 +9,6 @@ var map = new mapboxgl.Map({
   zoom: 8.7
 });
 
-//Calculate circleRadius
-{
-  /*function circleRadius() {
-  const center = [data.features.geometry.coordinates];
-  const radius = 30;
-  for (const i = 0; i < center.length; i++) {
-    const options = {
-      steps: 10,
-      units: "kilometers",
-      properties: {}
-    };
-    const circle = turf.circle(center, radius, options);
-  }
-}
-const addToMap = [turf.point(center), circle];
-
-//calculate bearing
-function bearing() {
-  const distance = 30; 
-  const bearing = [data.features.properties.blastBearings];
-  for (const i = 0; i < bearing.length; i++) {
-    const option: { units:  "kilometers" };
-  }
-  return(
-  const destination = turf.destination(point, distance, bearing, option);
-}*/
-}
-
 //Load data
 
 var blastData = {
@@ -405,6 +377,17 @@ var blastData = {
   ]
 };
 
+
+//Calculate circle radius
+var features=[];
+var point1 = turf.point([-73.798963,42.815856], { });//x,y
+function circleRadius(){
+  feature = data.feature.geometry.coordinates
+  for (var i = 0, len = features.length; i < len; i++) {
+}
+
+
+
 map.on("load", function() {
   map.addLayer({
     id: "points",
@@ -416,6 +399,13 @@ map.on("load", function() {
     layout: {},
     paint: {
       "circle-color": "red"
+    }
+  });
+  map.addSource("bearing", {
+    type: "geojson",
+    data: {
+      type: "FeatureCollection",
+      features: []
     }
   });
 });
