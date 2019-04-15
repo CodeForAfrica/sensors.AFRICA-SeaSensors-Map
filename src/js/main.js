@@ -377,16 +377,14 @@ var blastData = {
   ]
 };
 
-
 //Calculate circle radius
-var features=[];
-var point1 = turf.point([-73.798963,42.815856], { });//x,y
+const features=[];
+const point  = turf.point([data.feature.geometry.coordinates], { });
 function circleRadius(){
   feature = data.feature.geometry.coordinates
   for (var i = 0, len = features.length; i < len; i++) {
+    
 }
-
-
 
 map.on("load", function() {
   map.addLayer({
