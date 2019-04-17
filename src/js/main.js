@@ -380,6 +380,8 @@ var blastData = {
 var createGeoJSONCircle = function(center, radiusInKm, points) {
   if (!points) points = 64;
 
+  //var coordinates = data.features[y].geometry.coordinates;
+
   var coords = {
     latitude: center[1],
     longitude: center[0]
@@ -418,6 +420,8 @@ var createGeoJSONCircle = function(center, radiusInKm, points) {
   };
 };
 
+//calculate bearings
+
 map.on("load", function() {
   map.addLayer({
     id: "points",
@@ -432,7 +436,9 @@ map.on("load", function() {
       //"circle-opacity": 0.8
     }
   });
-  map.addSource("polygon", createGeoJSONCircle([39.07585, -5.49254], 0.5));
+
+  map.addSource("polygon", createGeoJSONCircle([39.30479, -4.86934], 30));
+
   map.addLayer({
     id: "polygon",
     type: "fill",
