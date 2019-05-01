@@ -1,21 +1,21 @@
-const path = require("path");
-var webpack = require("webpack");
+const path = require('path');
+var webpack = require('webpack');
 
-const devMode = process.env.NODE_ENV !== "production";
+const devMode = process.env.NODE_ENV !== 'production';
 module.exports = {
-  mode: devMode ? "development" : "production",
-  entry: ["./src/js/main.js"],
+  mode: devMode ? 'development' : 'production',
+  entry: ['./src/js/main.js'],
   output: {
-    path: path.resolve(__dirname, "public"),
-    publicPath: "assets/",
-    filename: "assets/js/bundle.js"
+    path: path.resolve(__dirname, 'public'),
+    publicPath: 'assets/',
+    filename: 'assets/js/bundle.js'
   },
   module: {
     rules: [
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ['babel-loader']
       },
       {
         // Adds support to load images in your CSS rules. It looks
@@ -23,10 +23,10 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
-              name: "[name].[ext]",
-              publicPath: "../images",
+              name: '[name].[ext]',
+              publicPath: '../images',
               emitFile: false
             }
           }
@@ -36,7 +36,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      "process.env.NODE_ENV": process.env.NODE_ENV
+      'process.env.NODE_ENV': process.env.NODE_ENV
     })
   ]
 };
