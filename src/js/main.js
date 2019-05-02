@@ -377,7 +377,7 @@ const blastData = {
 //get geojson coordinates value as center of circle
 let coordinateValues = [];
 Object.keys(blastData.features).forEach(e => {
-  coordinateValues.push(blastData.features[e].geometry.coordinates);
+  coordinateValues.push(blastData.features[e].geometry.coordinates[(0, 1)]);
 });
 //console.log(coordinateValues);
 
