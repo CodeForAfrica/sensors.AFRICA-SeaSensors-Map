@@ -373,13 +373,14 @@ const blastData = {
     }
   ]
 };
-
-//get geojson coordinates value as center of circle
-let coordinateValues = [];
-Object.keys(blastData.features).forEach(e => {
-  coordinateValues.push(blastData.features[e].geometry.coordinates);
+let centerCoordinate = {};
+blastData.features.forEach(function(item) {
+  centerCoordinate[item.geometry.coordinates] = true;
 });
 
+console.log(centerCoordinate);
+
+//create circle
 function geoJSONCircleRadius(center, radiusInKm, points) {
   if (!points) points = 64;
 
@@ -432,20 +433,15 @@ map.on('load', function() {
       'circle-opacity': 0.8
     }
   });
-
-  //map.addSource('polygon', geoJSONCircleRadius([39.07585, -5.49254], 30));
-
-  coordinateValues.forEach(function(index, value) {
-    map.addSource('polygon-' + index, geoJSONCircleRadius(value, 30));
-    map.addLayer({
-      id: 'polygon-' + index,
-      type: 'fill',
-      source: 'polygon',
-      layout: {},
-      paint: {
-        'fill-color': 'blue',
-        'fill-opacity': 0.6
-      }
-    });
+  map.addSource('polygon', geoJSONCircleRadius([39.30479, -4.86934], 30));
+  map.addLayer({
+    id: 'polygon',
+    type: 'fill',
+    source: 'polygon',
+    layout: {},
+    paint: {
+      'fill-color': 'blue',
+      'fill-opacity': 0.6
+    }
   });
 });
