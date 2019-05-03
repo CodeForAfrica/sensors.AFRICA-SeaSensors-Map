@@ -374,11 +374,13 @@ const blastData = {
   ]
 };
 let centerCoordinate = {};
+let result = [];
 blastData.features.forEach(function(item) {
   centerCoordinate[item.geometry.coordinates] = true;
+  result = Object.entries(centerCoordinate).map(value => ({ [value[0]]: value[1] }));
 });
 
-console.log(centerCoordinate);
+console.log(result);
 
 //create circle
 function geoJSONCircleRadius(center, radiusInKm, points) {
