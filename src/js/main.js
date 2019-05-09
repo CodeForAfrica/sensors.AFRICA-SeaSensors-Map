@@ -477,7 +477,7 @@ map.on('load', function () {
         },
         layout: {},
         paint: {
-            'circle-color': 'red',
+            'circle-color': '#463354',
             'circle-opacity': 0.8
         }
     });
@@ -488,7 +488,7 @@ map.on('load', function () {
         type: 'fill',
         source: 'circles',
         paint: {
-            'fill-color': 'blue',
+            'fill-color': '#463354',
             'fill-opacity': 0.6
         }
     });
@@ -501,7 +501,7 @@ map.on('load', function () {
             "line-cap": "round"
         },
         "paint": {
-            "line-color": "green",
+            "line-color": "#1E7B8D",
             "line-width": 1
         }
     });
