@@ -1,5 +1,5 @@
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiY29kZWZvcmFmcmljYSIsImEiOiJjanZnbXdpMmowNjE4NDNwY3IyYTIyOHluIn0.56Bu6mpVcCwcRAviI3f8hg';
+mapboxgl.accessToken = 'pk.eyJ1IjoiY29kZWZvcmFmcmljYSIsImEiOiJjanZncTltbGMwNWNmNGFxdGVnMmgybm13In0.UaoGiLigmlo8tArnSIcRhg';
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/codeforafrica/cju18pxjf12yj1gp7qhdmgicd',
