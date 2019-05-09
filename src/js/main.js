@@ -372,11 +372,6 @@ const blastData = {
     ]
 };
 
-//Karim:  Degree precision
-// This allows to identify unique coordinates
-// Note: Using a precision of 3, 
-//       This scale is said to unambiguously recognize a neighborhood or street
-//       It works in our case
 function applyPrecision(coordinates) {
     return coordinates.map(c => Number(c.toFixed(3)))
 }
@@ -385,8 +380,6 @@ function applyPrecision(coordinates) {
 const set = new Set(blastData.features.map(f => applyPrecision(f.geometry.coordinates).join(',')));
 const coordinates = [...set].map(c => c.split(',').map(cstr => Number(cstr)));
 
-//Nyokabi: Create circleRadius given radiusinKM and center point as coordinates, 
-//Part solution: https://stackoverflow.com/questions/37599561/drawing-a-circle-with-the-radius-in-miles-meters-with-mapbox-gl-js
 function circlesSource(centers, radiusInKm, points = 64) {
     const features = centers.map(center => {
 
