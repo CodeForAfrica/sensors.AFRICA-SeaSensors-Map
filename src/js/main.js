@@ -373,50 +373,49 @@ const blastData = {
     }
   ]
 };
-let centerCoordinate = {};
-let result = [];
-blastData.features.forEach(function(item) {
-  centerCoordinate[item.geometry.coordinates] = true;
-  result = Object.entries(centerCoordinate).map(value => ({ [value[0]]: value[1] }));
-});
 
-console.log(result);
+// Get unique coordinates to use for mapping
+const set = new Set(blastData.features.map(f => f.geometry.coordinates.join(',')));
+const coordinates = [...set].map(c => c.split(',').map(cstr => Number(cstr)));
 
 //create circle
-function geoJSONCircleRadius(center, radiusInKm, points) {
-  if (!points) points = 64;
+function geoJSONCircleRadius(centers, radiusInKm, points = 64) {
+    const features = centers.map(center => {
 
-  const coords = {
-    latitude: center[1],
-    longitude: center[0]
-  };
-  const km = radiusInKm;
+        console.log(center)
 
-  const ret = [];
-  const distanceX = km / (111.32 * Math.cos((coords.latitude * Math.PI) / 180));
-  const distanceY = km / 110.574;
-  for (var i = 0; i < points; i++) {
-    theta = (i / points) * (2 * Math.PI);
-    x = distanceX * Math.cos(theta);
-    y = distanceY * Math.sin(theta);
+        const coords = {
+            latitude: center[1],
+            longitude: center[0]
+          };
+          const km = radiusInKm;
+        
+          const ret = [];
+          const distanceX = km / (111.32 * Math.cos((coords.latitude * Math.PI) / 180));
+          const distanceY = km / 110.574;
+          for (var i = 0; i < points; i++) {
+            theta = (i / points) * (2 * Math.PI);
+            x = distanceX * Math.cos(theta);
+            y = distanceY * Math.sin(theta);
+        
+            ret.push([coords.longitude + x, coords.latitude + y]);
+          }
+          ret.push(ret[0]);
 
-    ret.push([coords.longitude + x, coords.latitude + y]);
-  }
-  ret.push(ret[0]);
+          return {
+              type: 'Feature',
+              geometry: {
+                type: 'Polygon',
+                coordinates: [ret]
+              }
+            };
+    });
 
   return {
     type: 'geojson',
     data: {
       type: 'FeatureCollection',
-      features: [
-        {
-          type: 'Feature',
-          geometry: {
-            type: 'Polygon',
-            coordinates: [ret]
-          }
-        }
-      ]
+      features
     }
   };
 }
@@ -435,12 +434,11 @@ map.on('load', function() {
       'circle-opacity': 0.8
     }
   });
-  map.addSource('polygon', geoJSONCircleRadius([39.30479, -4.86934], 30));
+  map.addSource('circles', geoJSONCircleRadius(coordinates, 30));
   map.addLayer({
     id: 'polygon',
     type: 'fill',
-    source: 'polygon',
-    layout: {},
+    source: 'circles',
     paint: {
       'fill-color': 'blue',
       'fill-opacity': 0.6
