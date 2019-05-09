@@ -373,8 +373,17 @@ const blastData = {
     ]
 };
 
+// Degree precision
+// This allows to identify unique coordinates
+// Note: Using a precision of 3, 
+//       This scale is said to unambiguously recognize a neighborhood or street
+//       It works in our case
+function applyPrecision(coordinates) {
+    return coordinates.map(c => Number(c.toFixed(3)))
+}
+
 // Get unique coordinates to use for mapping
-const set = new Set(blastData.features.map(f => f.geometry.coordinates.join(',')));
+const set = new Set(blastData.features.map(f => applyPrecision(f.geometry.coordinates).join(',')));
 const coordinates = [...set].map(c => c.split(',').map(cstr => Number(cstr)));
 
 function circlesSource(centers, radiusInKm, points = 64) {
@@ -423,7 +432,7 @@ function lineSource(centers, distanceInKm) {
     centers.forEach(center => {
 
         const bearings = blastData.features
-            .filter(f => f.geometry.coordinates.join(',') == center.join(','))
+            .filter(f => applyPrecision(f.geometry.coordinates).join(',') == center.join(','))
             .map(f => f.properties['Blast Bearing'])
 
         features = features.concat(bearings.map(bearing => {
