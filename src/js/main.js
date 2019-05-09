@@ -386,6 +386,8 @@ function applyPrecision(coordinates) {
 const set = new Set(blastData.features.map(f => applyPrecision(f.geometry.coordinates).join(',')));
 const coordinates = [...set].map(c => c.split(',').map(cstr => Number(cstr)));
 
+//Create circleRadius given radiusin KM and center point as coordinates, 
+//Part solution: https://stackoverflow.com/questions/37599561/drawing-a-circle-with-the-radius-in-miles-meters-with-mapbox-gl-js
 function circlesSource(centers, radiusInKm, points = 64) {
     const features = centers.map(center => {
 
