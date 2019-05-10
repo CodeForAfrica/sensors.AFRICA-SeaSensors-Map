@@ -1,10 +1,10 @@
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiY29kZWZvcmFmcmljYSIsImEiOiJjanZncTltbGMwNWNmNGFxdGVnMmgybm13In0.UaoGiLigmlo8tArnSIcRhg';
+mapboxgl.accessToken = process.env.MapboxAccessToken;
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/codeforafrica/cju18pxjf12yj1gp7qhdmgicd',
-    center: [39.003574, -5.208427],
-    zoom: 8.7
+    center: [39.440,-5.201],
+    zoom: 7.93
 });
 
 const blastData = {
@@ -372,6 +372,11 @@ const blastData = {
     ]
 };
 
+ //Karim:  Degree precision
+// This allows to identify unique coordinates
+// Note: Using a precision of 3, 
+//       This scale is said to unambiguously recognize a neighborhood or street
+//       It works in our case
 function applyPrecision(coordinates) {
     return coordinates.map(c => Number(c.toFixed(3)))
 }
@@ -382,8 +387,6 @@ const coordinates = [...set].map(c => c.split(',').map(cstr => Number(cstr)));
 
 function circlesSource(centers, radiusInKm, points = 64) {
     const features = centers.map(center => {
-
-        console.log(center)
 
         const coords = {
             latitude: center[1],
