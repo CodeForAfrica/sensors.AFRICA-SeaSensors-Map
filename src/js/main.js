@@ -382,9 +382,6 @@ const coordinates = [...set].map(c => c.split(',').map(cstr => Number(cstr)));
 
 function circlesSource(centers, radiusInKm, points = 64) {
     const features = centers.map(center => {
-
-        console.log(center)
-
         const coords = {
             latitude: center[1],
             longitude: center[0]
