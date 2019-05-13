@@ -1,5 +1,5 @@
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiY29kZWZvcmFmcmljYSIsImEiOiJjanZncTltbGMwNWNmNGFxdGVnMmgybm13In0.UaoGiLigmlo8tArnSIcRhg';
+mapboxgl.accessToken = 'pk.eyJ1IjoiY29kZWZvcmFmcmljYSIsImEiOiJjanZpMnRvdHYwMXF4NDNsMndlbDhwNDM1In0.MN-db8RcUd9dfWRvD7arEg';
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/codeforafrica/cju18pxjf12yj1gp7qhdmgicd',
@@ -7,6 +7,7 @@ var map = new mapboxgl.Map({
     zoom: 8.7
 });
 
+// TODO: Load from a separate file
 const blastData = {
     type: 'FeatureCollection',
     features: [{
