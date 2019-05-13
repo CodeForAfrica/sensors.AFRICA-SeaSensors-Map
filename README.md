@@ -19,7 +19,6 @@ Run the following commands to get started:
 
 ```
   yarn
-  source .env
   yarn build
   yarn dev
 ```
