@@ -1,1 +1,111 @@
-!function(e){var t={};function a(i){if(t[i])return t[i].exports;var o=t[i]={i:i,l:!1,exports:{}};return e[i].call(o.exports,o,o.exports,a),o.l=!0,o.exports}a.m=e,a.c=t,a.d=function(e,t,i){a.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:i})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(e,t){if(1&t&&(e=a(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var i=Object.create(null);if(a.r(i),Object.defineProperty(i,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)a.d(i,o,function(t){return e[t]}.bind(null,o));return i},a.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(t,"a",t),t},a.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},a.p="assets/",a(a.s=0)}([function(e,t,a){e.exports=a(1)},function(e,t){mapboxgl.accessToken="pk.eyJ1IjoiY29kZWZvcmFmcmljYSIsImEiOiJjanZpMnRvdHYwMXF4NDNsMndlbDhwNDM1In0.MN-db8RcUd9dfWRvD7arEg";var a=new mapboxgl.Map({container:"map",style:"mapbox://styles/codeforafrica/cju18pxjf12yj1gp7qhdmgicd",center:[39.003574,-5.208427],zoom:8.7}),i={type:"FeatureCollection",features:[{type:"Feature",geometry:{type:"Point",coordinates:[39.07604,-5.49252]},properties:{Id:1,Location:"Maziwe Island",Date:"6/4/2018",Day:"Monday",Time:"12:29:53 PM","Time of Day":"PM","Tidal State":"Low","Spring/Neap":"","Wav-File-Name":"Ish_Bomb20180604_122952_911","Blast Bearing":28.66,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.07604,-5.49252]},properties:{Id:2,Location:"Maziwe Island",Date:"6/16/2018",Day:"Saturday",Time:"8:29:45 AM","Time of Day":"AM","Tidal State":"Falling","Spring/Neap":"Spring","Wav-File-Name":"Ish_Bomb20180616_082945_232","Blast Bearing":33.14,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.07604,-5.49252]},properties:{Id:3,Location:"Maziwe Island",Date:"6/16/2018",Day:"Saturday",Time:"9:22:11 AM","Time of Day":"AM","Tidal State":"Falling","Spring/Neap":"Spring","Wav-File-Name":"Ish_Bomb20180616_092210_703","Blast Bearing":31.72,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.07604,-5.49252]},properties:{Id:4,Location:"Maziwe Island",Date:"6/16/2018",Day:"Saturday",Time:"9:23:03 AM","Time of Day":"AM","Tidal State":"Falling","Spring/Neap":"Spring","Wav-File-Name":"Ish_Bomb20180616_092302_786","Blast Bearing":33.14,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.07604,-5.49252]},properties:{Id:5,Location:"Maziwe Island",Date:"6/16/2018",Day:"Saturday",Time:"9:24:45 AM","Time of Day":"AM","Tidal State":"Falling","Spring/Neap":"Spring","Wav-File-Name":"Ish_Bomb20180616_092445_315","Blast Bearing":33.14,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.07604,-5.49252]},properties:{Id:6,Location:"Maziwe Island",Date:"6/16/2018",Day:"Saturday",Time:"9:29:57 AM","Time of Day":"AM","Tidal State":"Falling","Spring/Neap":"Spring","Wav-File-Name":"Ish_Bomb20180616_092956_809","Blast Bearing":33.14,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.07604,-5.49252]},properties:{Id:7,Location:"Maziwe Island",Date:"6/25/2018",Day:"Monday",Time:"8:15:53 AM","Time of Day":"AM","Tidal State":"Low","Spring/Neap":"Neap","Wav-File-Name":"Ish_Bomb20180625_081553_435","Blast Bearing":28.62,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.07604,-5.49252]},properties:{Id:8,Location:"Maziwe Island",Date:"6/25/2018",Day:"Monday",Time:"9:06:39 AM","Time of Day":"AM","Tidal State":"Low","Spring/Neap":"Neap","Wav-File-Name":"Ish_Bomb20180625_090639_061","Blast Bearing":33.14,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.07604,-5.49252]},properties:{Id:9,Location:"Maziwe Island",Date:"7/10/2018",Day:"Tuesday",Time:"9:31:09 AM","Time of Day":"AM","Tidal State":"Rising","Spring/Neap":"","Wav-File-Name":"Ish_Bomb20180710_093109_449","Blast Bearing":27.05,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.07604,-5.49252]},properties:{Id:10,Location:"Maziwe Island",Date:"7/10/2018",Day:"Tuesday",Time:"9:31:31 AM","Time of Day":"AM","Tidal State":"Rising","Spring/Neap":"","Wav-File-Name":"Ish_Bomb20180710_093130_896","Blast Bearing":28.57,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.07604,-5.49252]},properties:{Id:11,Location:"Maziwe Island",Date:"7/11/2018",Day:"Wednesday",Time:"7:59:01 AM","Time of Day":"AM","Tidal State":"Low","Spring/Neap":"","Wav-File-Name":"Ish_Bomb20180711_075900_778","Blast Bearing":28.57,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.07604,-5.49252]},properties:{Id:12,Location:"Maziwe Island",Date:"7/11/2018",Day:"Wednesday",Time:"8:40:15 AM","Time of Day":"AM","Tidal State":"Low","Spring/Neap":"","Wav-File-Name":"Ish_Bomb20180711_084015_258","Blast Bearing":27.05,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.07604,-5.49252]},properties:{Id:13,Location:"Maziwe Island",Date:"7/11/2018",Day:"Wednesday",Time:"8:40:34 AM","Time of Day":"AM","Tidal State":"Low","Spring/Neap":"","Wav-File-Name":"Ish_Bomb20180711_084033_761","Blast Bearing":27.05,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.07604,-5.49252]},properties:{Id:14,Location:"Maziwe Island",Date:"7/14/2018",Day:"Saturday",Time:"12:32:11 PM","Time of Day":"PM","Tidal State":"Rising","Spring/Neap":"Spring","Wav-File-Name":"Ish_Bomb20180714_123210_673","Blast Bearing":34.84,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.07604,-5.49252]},properties:{Id:15,Location:"Maziwe Island",Date:"7/15/2018",Day:"Sunday",Time:"8:41:02 AM","Time of Day":"AM","Tidal State":"Falling","Spring/Neap":"Spring","Wav-File-Name":"Ish_Bomb20180715_084102_135","Blast Bearing":33.23,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.30479,-4.86934]},properties:{Id:16,Location:"Fish Eagle",Date:"8/8/2018",Day:"Wednesday",Time:"2:29:37 PM","Time of Day":"PM","Tidal State":"High","Spring/Neap":"","Wav-File-Name":"Ish_Bomb20180808_142936_784","Blast Bearing":15.38,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.30479,-4.86934]},properties:{Id:17,Location:"Fish Eagle",Date:"8/21/2018",Day:"Tuesday",Time:"3:20:55 PM","Time of Day":"PM","Tidal State":"Falling","Spring/Neap":"","Wav-File-Name":"Ish_Bomb20180821_152054_827","Blast Bearing":15.41,"Detection Radius(km)":"30"}},{type:"Feature",geometry:{type:"Point",coordinates:[39.07585,-5.49254]},properties:{Id:18,Location:"Maziwe Island",Date:"9/29/2018 9:35:14",Day:"Saturday",Time:"09:35:14AM","Time of Day":"AM","Tidal State":"","Spring/Neap":"","Wav-File-Name":"Ish_Bomb20180929_093514_719","Blast Bearing":17.54,"Detection Radius(km)":"30"}}]};function o(e){return e.map(function(e){return Number(e.toFixed(3))})}var n,r=new Set(i.features.map(function(e){return o(e.geometry.coordinates).join(",")})),p=(n=r,function(e){if(Array.isArray(e)){for(var t=0,a=new Array(e.length);t<e.length;t++)a[t]=e[t];return a}}(n)||function(e){if(Symbol.iterator in Object(e)||"[object Arguments]"===Object.prototype.toString.call(e))return Array.from(e)}(n)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance")}()).map(function(e){return e.split(",").map(function(e){return Number(e)})});a.on("load",function(){var e,t;a.addLayer({id:"points",type:"circle",source:{type:"geojson",data:i},layout:{},paint:{"circle-color":"#463354","circle-opacity":.8}}),a.addSource("circles",function(e,t){var a=arguments.length>2&&void 0!==arguments[2]?arguments[2]:64;return{type:"geojson",data:{type:"FeatureCollection",features:e.map(function(e){for(var i=e[1],o=e[0],n=t,r=[],p=n/(111.32*Math.cos(i*Math.PI/180)),s=n/110.574,d=0;d<a;d++)theta=d/a*(2*Math.PI),x=p*Math.cos(theta),y=s*Math.sin(theta),r.push([o+x,i+y]);return r.push(r[0]),{type:"Feature",geometry:{type:"Polygon",coordinates:[r]}}})}}}(p,30)),a.addSource("lines",(e=30,t=[],p.forEach(function(a){var n=i.features.filter(function(e){return o(e.geometry.coordinates).join(",")==a.join(",")}).map(function(e){return e.properties["Blast Bearing"]});t=t.concat(n.map(function(t){var i=e/(111.32*Math.cos(a[1]*Math.PI/180)),o=e/110.574;return theta=t*Math.PI/180,x=i*Math.cos(theta),y=o*Math.sin(theta),{type:"Feature",geometry:{type:"LineString",coordinates:[a,[a[0]+x,a[1]+y]]}}}))}),{type:"geojson",data:{type:"FeatureCollection",features:t}})),a.addLayer({id:"polygon",type:"fill",source:"circles",paint:{"fill-color":"#463354","fill-opacity":.6}}),a.addLayer({id:"route",type:"line",source:"lines",layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":"#1798A6","line-width":1}})})}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "assets/";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/js/main.js":
+/*!************************!*\
+  !*** ./src/js/main.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nSyntaxError: /Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/src/js/main.js: Unexpected token (1:0)\\n\\n\\u001b[0m\\u001b[31m\\u001b[1m>\\u001b[22m\\u001b[39m\\u001b[90m 1 | \\u001b[39m\\u001b[33m<<\\u001b[39m\\u001b[33m<<\\u001b[39m\\u001b[33m<<\\u001b[39m\\u001b[33m<\\u001b[39m \\u001b[33mHEAD\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m   | \\u001b[39m\\u001b[31m\\u001b[1m^\\u001b[22m\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 2 | \\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 3 | \\u001b[39mmapboxgl\\u001b[33m.\\u001b[39maccessToken \\u001b[33m=\\u001b[39m \\u001b[32m'pk.eyJ1IjoiY29kZWZvcmFmcmljYSIsImEiOiJjanZpMnRvdHYwMXF4NDNsMndlbDhwNDM1In0.MN-db8RcUd9dfWRvD7arEg'\\u001b[39m\\u001b[33m;\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 4 | \\u001b[39m\\u001b[33m===\\u001b[39m\\u001b[33m===\\u001b[39m\\u001b[33m=\\u001b[39m\\u001b[0m\\n    at Parser.raise (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:6322:17)\\n    at Parser.unexpected (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:7638:16)\\n    at Parser.parseExprAtom (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:8799:20)\\n    at Parser.parseExprSubscripts (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:8385:23)\\n    at Parser.parseMaybeUnary (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:8365:21)\\n    at Parser.parseExprOps (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:8252:23)\\n    at Parser.parseMaybeConditional (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:8225:23)\\n    at Parser.parseMaybeAssign (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:8172:21)\\n    at Parser.parseExpression (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:8120:23)\\n    at Parser.parseStatementContent (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:9892:23)\\n    at Parser.parseStatement (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:9763:17)\\n    at Parser.parseBlockOrModuleBlockBody (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:10340:25)\\n    at Parser.parseBlockBody (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:10327:10)\\n    at Parser.parseTopLevel (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:9692:10)\\n    at Parser.parse (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:11209:17)\\n    at parse (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/parser/lib/index.js:11245:38)\\n    at parser (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/core/lib/transformation/normalize-file.js:170:34)\\n    at normalizeFile (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/core/lib/transformation/normalize-file.js:138:11)\\n    at runSync (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/core/lib/transformation/index.js:44:43)\\n    at runAsync (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/core/lib/transformation/index.js:35:14)\\n    at process.nextTick (/Users/cfafrica/Desktop/sensors.AFRICA-SeaSensors-Map/node_modules/@babel/core/lib/transform.js:34:34)\\n    at process.internalTickCallback (internal/process/next_tick.js:70:11)\");\n\n//# sourceURL=webpack:///./src/js/main.js?");
+
+/***/ }),
+
+/***/ 0:
+/*!******************************!*\
+  !*** multi ./src/js/main.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__(/*! ./src/js/main.js */\"./src/js/main.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/main.js?");
+
+/***/ })
+
+/******/ });
