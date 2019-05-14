@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-
-mapboxgl.accessToken = 'pk.eyJ1IjoiY29kZWZvcmFmcmljYSIsImEiOiJjanZpMnRvdHYwMXF4NDNsMndlbDhwNDM1In0.MN-db8RcUd9dfWRvD7arEg';
-=======
 mapboxgl.accessToken = process.env.MapboxAccessToken;
->>>>>>> fix/review-setup
 var map = new mapboxgl.Map({
  container: 'map',
  style: 'mapbox://styles/codeforafrica/cju18pxjf12yj1gp7qhdmgicd',
