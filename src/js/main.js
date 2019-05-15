@@ -650,18 +650,12 @@ function lineSource(centers, distanceInKm) {
   }
  };
 }
-
-//Total number of sensors
-const sensors = {};
-blastData.features.forEach(function(i) {
- sensors[i.geometry.coordinates] = true;
-});
-const sensorObjects = Object.keys(sensors).length;
-document.getElementById('number-sensor').innerHTML = sensorObjects;
+const numOfSensors = Object.keys(coordinates).length;
+document.getElementById('number-sensor').innerHTML = numOfSensors;
 
 //Total number of blast recorded
-const elem = Object.keys(blastData.features).length;
-document.getElementById('number-detected').innerHTML = elem;
+const blastRecorded = Object.keys(blastData.features).length;
+document.getElementById('number-detected').innerHTML = blastRecorded;
 
 map.on('load', function() {
  const zoomControls = new mapboxgl.NavigationControl();
