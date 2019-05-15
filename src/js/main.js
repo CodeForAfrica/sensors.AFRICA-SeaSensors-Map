@@ -372,19 +372,6 @@ const blastData = {
   }
  ]
 };
-
-//Return sensors
-let sensors = {};
-blastData.features.forEach(function(i) {
- sensors[i.geometry.coordinates] = true;
-});
-var sensorObjects = Object.keys(sensors).length;
-document.getElementById('number-sensor').innerHTML = sensorObjects;
-
-//return number of blast recorded
-var elem = Object.keys(blastData.features).length;
-document.getElementById('number-detected').innerHTML = elem;
-
 //Karim:  Degree precision
 // This allows to identify unique coordinates
 // Note: Using a precision of 3,
@@ -476,6 +463,19 @@ function lineSource(centers, distanceInKm) {
   }
  };
 }
+
+//Total number of sensors
+const sensors = {};
+blastData.features.forEach(function(i) {
+ sensors[i.geometry.coordinates] = true;
+});
+const sensorObjects = Object.keys(sensors).length;
+document.getElementById('number-sensor').innerHTML = sensorObjects;
+
+//Total number of blast recorded
+const elem = Object.keys(blastData.features).length;
+document.getElementById('number-detected').innerHTML = elem;
+
 map.on('load', function() {
  map.addLayer({
   id: 'points',
