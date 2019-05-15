@@ -6,6 +6,7 @@ var map = new mapboxgl.Map({
  zoom: 7.66
 });
 
+//TODO: Load in a separate file
 const blastData = {
  type: 'FeatureCollection',
  features: [
@@ -663,6 +664,8 @@ const elem = Object.keys(blastData.features).length;
 document.getElementById('number-detected').innerHTML = elem;
 
 map.on('load', function() {
+ const zoomControls = new mapboxgl.NavigationControl();
+ map.addControl(zoomControls, 'bottom-right');
  map.addLayer({
   id: 'points',
   type: 'circle',
