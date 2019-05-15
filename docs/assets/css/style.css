@@ -48,10 +48,10 @@ h5 {
  flex-direction: row;
  justify-content: space-around;
 }
-.number-sensor {
+#number-sensor {
  color: #4a345a;
 }
-.number-detected {
+#number-detected {
  color: #053354;
 }
 .number-text {

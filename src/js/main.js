@@ -373,6 +373,18 @@ const blastData = {
  ]
 };
 
+//Return sensors
+let sensors = {};
+blastData.features.forEach(function(i) {
+ sensors[i.geometry.coordinates] = true;
+});
+var sensorObjects = Object.keys(sensors).length;
+document.getElementById('number-sensor').innerHTML = sensorObjects;
+
+//return number of blast recorded
+var elem = Object.keys(blastData.features).length;
+document.getElementById('number-detected').innerHTML = elem;
+
 //Karim:  Degree precision
 // This allows to identify unique coordinates
 // Note: Using a precision of 3,
@@ -503,3 +515,6 @@ map.on('load', function() {
   }
  });
 });
+
+//Counter =>simple for loop/counter to for through the data =>dictionary and make a count to get the value=>push it to the ocode
+//Filter => in the afternoon
