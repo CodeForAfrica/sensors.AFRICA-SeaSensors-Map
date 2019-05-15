@@ -464,7 +464,6 @@ function lineSource(centers, distanceInKm) {
   }
  };
 }
-
 map.on('load', function() {
  map.addLayer({
   id: 'points',
