@@ -1,4 +1,4 @@
-import blastData from './blastData.js';
+import blastData from './blastData';
 
 mapboxgl.accessToken = process.env.MapboxAccessToken;
 var map = new mapboxgl.Map({

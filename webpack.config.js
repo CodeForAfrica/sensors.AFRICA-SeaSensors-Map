@@ -10,6 +10,9 @@ module.exports = {
   publicPath: 'assets/',
   filename: 'assets/js/bundle.js'
  },
+ resolve: {
+  extensions: ['.js']
+ },
  module: {
   rules: [
    {
