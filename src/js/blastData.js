@@ -16,7 +16,7 @@ const blastData = {
     'Time of Day': 'PM',
     Year: 2018,
     'Tidal State': 'Falling',
-    'Spring/Neap': 'Spring',
+    Tide: 'Spring',
     'Wav-File-Name': 'Ish_Bomb20180604_122952_913',
     'Blast Bearing': 28.66,
     'Detection Radius(km)': '30'
@@ -37,7 +37,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180616_082945_232',
     'Blast Bearing': 33.14,
     'Detection Radius(km)': '30'
@@ -58,7 +58,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180616_092210_704',
     'Blast Bearing': 31.72,
     'Detection Radius(km)': '30'
@@ -79,7 +79,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180616_092302_771',
     'Blast Bearing': 33.14,
     'Detection Radius(km)': '30'
@@ -100,7 +100,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': 'Falling',
-    'Spring/Neap': 'Spring',
+    Tide: 'Spring',
     'Wav-File-Name': 'Ish_Bomb20180616_092445_315',
     'Blast Bearing': 33.14,
     'Detection Radius(km)': '30'
@@ -121,7 +121,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': 'High',
-    'Spring/Neap': 'Normal',
+    Tide: 'Normal',
     'Wav-File-Name': 'Ish_Bomb20180616_092956_809',
     'Blast Bearing': 33.14,
     'Detection Radius(km)': '30'
@@ -142,7 +142,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': 'Falling',
-    'Spring/Neap': 'Normal',
+    Tide: 'Normal',
     'Wav-File-Name': 'Ish_Bomb20180616_110815_511',
     'Blast Bearing': 24.59,
     'Detection Radius(km)': '30'
@@ -163,7 +163,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': 'Falling',
-    'Spring/Neap': 'Spring',
+    Tide: 'Spring',
     'Wav-File-Name': 'Ish_Bomb20180616_111315_609',
     'Blast Bearing': 31.48,
     'Detection Radius(km)': '30'
@@ -184,7 +184,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180616_112746_876',
     'Blast Bearing': 36.93,
     'Detection Radius(km)': '30'
@@ -205,7 +205,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180625_081553_435',
     'Blast Bearing': 28.62,
     'Detection Radius(km)': '30'
@@ -226,7 +226,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180625_090639_061',
     'Blast Bearing': 33.14,
     'Detection Radius(km)': '30'
@@ -247,7 +247,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180708_093430_749',
     'Blast Bearing': 26.95,
     'Detection Radius(km)': '30'
@@ -268,7 +268,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180708_125236_672',
     'Blast Bearing': 25.58,
     'Detection Radius(km)': '30'
@@ -288,7 +288,7 @@ const blastData = {
     Time: '9:31:09 AM',
     'Time of Day': 'AM',
     Year: 2018,
-    'Tidal State': '',
+    Tide: '',
     'Spring/Neap': '',
     'Wav-File-Name': 'Ish_Bomb20180710_093109_435',
     'Blast Bearing': 27.05,
@@ -310,7 +310,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180711_075900_759',
     'Blast Bearing': 28.57,
     'Detection Radius(km)': '30'
@@ -331,7 +331,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180711_084015_259',
     'Blast Bearing': 27.05,
     'Detection Radius(km)': '30'
@@ -352,7 +352,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180711_084033_760',
     'Blast Bearing': 27.05,
     'Detection Radius(km)': '30'
@@ -373,7 +373,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180712_074048_850',
     'Blast Bearing': 22.77,
     'Detection Radius(km)': '30'
@@ -394,7 +394,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180712_084025_028',
     'Blast Bearing': 22.07,
     'Detection Radius(km)': '30'
@@ -415,7 +415,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180713_093038_601',
     'Blast Bearing': 36.49,
     'Detection Radius(km)': '30'
@@ -436,7 +436,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180713_095031_517',
     'Blast Bearing': 31.77,
     'Detection Radius(km)': '30'
@@ -457,7 +457,7 @@ const blastData = {
     'Time of Day': 'PM',
     Year: 2018,
     'Tidal State': '',
-    'Spring/Neap': '',
+    Tide: '',
     'Wav-File-Name': 'Ish_Bomb20180714_123210_673',
     'Blast Bearing': 34.84,
     'Detection Radius(km)': '30'
@@ -478,7 +478,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': 'Falling',
-    'Spring/Neap': 'Spring',
+    Tide: 'Spring',
     'Wav-File-Name': 'Ish_Bomb20180715_084102_135',
     'Blast Bearing': 33.23,
     'Detection Radius(km)': '30'
@@ -499,7 +499,7 @@ const blastData = {
     'Time of Day': 'PM',
     Year: 2018,
     'Tidal State': 'High',
-    'Spring/Neap': 'Normal',
+    Tide: 'Normal',
     'Wav-File-Name': 'Ish_Bomb20180808_142936_784',
     'Blast Bearing': 15.38,
     'Detection Radius(km)': '30'
@@ -520,10 +520,10 @@ const blastData = {
     'Time of Day': 'PM',
     Year: 2018,
     'Tidal State': 'Falling',
-    'Spring/Neap': 'Normal',
+    Tide: 'Normal',
     'Wav-File-Name': 'Ish_Bomb20180821_152054_827',
     'Blast Bearing': 15.41,
-    'Detection Radius(km)': '30'
+    'Detection Radius(km)s': '30'
    }
   },
   {
@@ -541,7 +541,7 @@ const blastData = {
     'Time of Day': 'AM',
     Year: 2018,
     'Tidal State': 'Falling',
-    'Spring/Neap': 'Spring',
+    Tide: 'Spring',
     'Wav-File-Name': 'Ish_Bomb20180929_093514_719',
     'Blast Bearing': 17.54,
     'Detection Radius(km)': '30'

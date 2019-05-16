@@ -22,7 +22,6 @@ const set = new Set(
  blastData.features.map(f => applyPrecision(f.geometry.coordinates).join(','))
 );
 const coordinates = [...set].map(c => c.split(',').map(cstr => Number(cstr)));
-console.log(coordinates);
 
 function circlesSource(centers, radiusInKm, points = 64) {
  const features = centers.map(center => {
@@ -104,6 +103,19 @@ function lineSource(centers, distanceInKm) {
   }
  };
 }
+
+//Apply filter
+{
+ /*const tides = [];
+blastData.features
+ .map(function(i) {
+  tides.push(i.properties.Tide);
+ })
+ .filter();
+
+console.log(tides);*/
+}
+
 const numOfSensors = Object.keys(coordinates).length;
 document.getElementById('number-sensor').innerHTML = numOfSensors;
 
@@ -128,7 +140,7 @@ map.on('load', function() {
   }
  });
  map.addSource('circles', circlesSource(coordinates, 30));
- map.addSource('lines', lineSource(coordinates, 30));
+ map.addSource('lines', lineSource(coordinates, 30)); //add filter on the function
  map.addLayer({
   id: 'polygon',
   type: 'fill',

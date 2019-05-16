@@ -65,7 +65,7 @@ h5 {
 }
 #filter {
  position: fixed;
- top: 12rem;
+ top: 0;
  left: 3rem;
  bottom: 2rem;
  background-color: white;
