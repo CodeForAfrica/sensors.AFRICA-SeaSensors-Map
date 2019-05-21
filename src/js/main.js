@@ -103,18 +103,22 @@ function lineSource(centers, distanceInKm) {
   }
  };
 }
+//Step one
+//
+var filterGroup = document.getElementById('filter-group');
+// Add checkbox and label elements for the layer.
+var input = document.createElement('input');
+input.type = 'radio';
+input.id = layerID;
+input.checked = true;
+filterGroup.appendChild(input);
 
-//Apply filter
-{
- /*const tides = [];
-blastData.features
- .map(function(i) {
-  tides.push(i.properties.Tide);
- })
- .filter();
+//Step two
+//Filter data according to time anc show coordinates + display coordinates
 
-console.log(tides);*/
-}
+//Steo three
+
+//Show data values
 
 const numOfSensors = Object.keys(coordinates).length;
 document.getElementById('number-sensor').innerHTML = numOfSensors;

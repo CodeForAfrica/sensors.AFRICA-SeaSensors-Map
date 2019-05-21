@@ -66,30 +66,23 @@
   //get all filters through a common id, group everything with snippets of titles inbetween
 -->
   <div class="overlay-map" id ="filter">
+
     <div class="title-div">
       <h2 class="title">Filters</h2>
+      <h3 id="example-filter"></h3>
     </div>
-    <div id="filter-box">
-        <div id="group-data">
+    <div id="filter-group">
           <h3 class="filter-title">Tide</h3>
-          <div><input id ="tide" type="radio" name="spring" value="spring">Spring</input></div>
-          <div><input id ="tide" type="radio" name="normal" value="normal">Normal</input></div>
+          <div><input id ="tide" type="radio" name="coord" value="spring">Spring</input></div>
+          <div><input id ="tide" type="radio" name="coord" value="normal">Normal</input></div>
           <h3 class="filter-title">Tidal state</h3>
-          <div><input id="tidal-states" type="radio" name="falling" value="falling">Falling</input></div>
-          <div><input id="tidal-states" type="radio" name="high" value="high">High</input></div>
-          <h3 class="filter-title">Day</h3>
-          <div><input id="day" type="radio" name="monday" value="monday">Monday</input></div>
-          <div><input id="day" type="radio" name="tuesday" value="tuesday">Tuesday</input></div>
-          <div><input id="day" type="radio" name="wednesday" value="wednesday">Wednesday</input></div>
-          <div><input id="day" type="radio" name="thursday" value="thursday">Thursday</input></div>
-          <div><input id="day"type="radio" name="friday" value="friday">Friday</input></div>
-          <div><input id="day"type="radio" name="saturday" value="saturday">Saturday</input></div>
-          <div><input id="day" type="radio" name="sunday" value="sunday">Sunday</input></div>
-          <div><h3 class="filter-title">Time of Day</h3></div>
-          <div><input id ="time-od-day" type="radio" name="am" value="am">AM</input></div>
-          <div><input id ="time-od-day"type="radio" name="pm" value="pm">PM</input></div>
-        </div>
+          <div><input id="tidal-states" type="radio" name="coord" value="falling">Falling</input></div>
+          <div><input id="tidal-states" type="radio" name="coord" value="high">High</input></div>
+         <div><h3 class="filter-title">Time of Day</h3></div>
+          <div><input id ="time-of-day" type="radio" name="coord" value="am">AM</input></div>
+          <div><input id ="time-of-day"type="radio" name="coord" value="pm">PM</input></div>
     </div>
+    </form>
   <script src="./assets/js/bundle.js"></script>
  </body>
 </html>
