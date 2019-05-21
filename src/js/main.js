@@ -103,22 +103,44 @@ function lineSource(centers, distanceInKm) {
   }
  };
 }
-//Step one
-//
+
+//Filter all the content
+var featureTides = [];
+var tides = blastData.features.filter(function(item) {
+ if (
+  item.properties.Tide == 'Spring' ||
+  item.properties.Tide == 'Normal' ||
+  item.properties.Tide == ''
+ ) {
+  return featureTides.push(item.properties.Tide);
+ } else if (item.properties.Tide == 'Spring') {
+  return featureTides.push(item.properties.Tide);
+ } else if (item.properties.Tide == 'Normal') {
+  return featureTides.push(item.properties.Tide);
+ } else return null;
+});
+
+var featureTidings = [];
+var tidings = blastData.features.filter(function(item) {
+ if (
+  item.properties['Tidal State'] == '' ||
+  item.properties['Tidal State'] == undefined
+ ) {
+  return null;
+ } else featureTidings.push(item.properties['Tidal State']);
+});
+
+const timeofDay = [];
+var times = blastData.features.filter(function(item) {
+ if (item.properties['Time of Day'] == 'AM') {
+  return timeofDay.push(item.properties['Time of Day']);
+ } else if (item.properties['Time of Day'] == 'PM') {
+  return timeofDay.push(item.properties['Time of Day']);
+ } else return item.properties['Time of Day'];
+});
+
 var filterGroup = document.getElementById('filter-group');
-// Add checkbox and label elements for the layer.
-var input = document.createElement('input');
-input.type = 'radio';
-input.id = layerID;
-input.checked = true;
-filterGroup.appendChild(input);
-
-//Step two
-//Filter data according to time anc show coordinates + display coordinates
-
-//Steo three
-
-//Show data values
+var input = filterGroup.getElementsByTagName('input');
 
 const numOfSensors = Object.keys(coordinates).length;
 document.getElementById('number-sensor').innerHTML = numOfSensors;
