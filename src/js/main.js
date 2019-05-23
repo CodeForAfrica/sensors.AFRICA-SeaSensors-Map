@@ -142,6 +142,7 @@ var times = blastData.features.filter(function(item) {
 var filterGroup = document.getElementById('filter-group');
 var input = filterGroup.getElementsByTagName('input');
 
+//counter card
 const numOfSensors = Object.keys(coordinates).length;
 document.getElementById('number-sensor').innerHTML = numOfSensors;
 
