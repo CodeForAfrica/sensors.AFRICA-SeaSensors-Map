@@ -104,44 +104,6 @@ function lineSource(centers, distanceInKm) {
  };
 }
 
-//Filter all the content
-var featureTides = [];
-var tides = blastData.features.filter(function(item) {
- if (
-  item.properties.Tide == 'Spring' ||
-  item.properties.Tide == 'Normal' ||
-  item.properties.Tide == ''
- ) {
-  return featureTides.push(item.properties.Tide);
- } else if (item.properties.Tide == 'Spring') {
-  return featureTides.push(item.properties.Tide);
- } else if (item.properties.Tide == 'Normal') {
-  return featureTides.push(item.properties.Tide);
- } else return null;
-});
-
-var featureTidings = [];
-var tidings = blastData.features.filter(function(item) {
- if (
-  item.properties['Tidal State'] == '' ||
-  item.properties['Tidal State'] == undefined
- ) {
-  return null;
- } else featureTidings.push(item.properties['Tidal State']);
-});
-
-const timeofDay = [];
-var times = blastData.features.filter(function(item) {
- if (item.properties['Time of Day'] == 'AM') {
-  return timeofDay.push(item.properties['Time of Day']);
- } else if (item.properties['Time of Day'] == 'PM') {
-  return timeofDay.push(item.properties['Time of Day']);
- } else return item.properties['Time of Day'];
-});
-
-var filterGroup = document.getElementById('filter-group');
-var input = filterGroup.getElementsByTagName('input');
-
 //counter card
 const numOfSensors = Object.keys(coordinates).length;
 document.getElementById('number-sensor').innerHTML = numOfSensors;
@@ -167,7 +129,7 @@ map.on('load', function() {
   }
  });
  map.addSource('circles', circlesSource(coordinates, 30));
- map.addSource('lines', lineSource(coordinates, 30)); //add filter on the function
+ map.addSource('lines', lineSource(coordinates, 30));
  map.addLayer({
   id: 'polygon',
   type: 'fill',
