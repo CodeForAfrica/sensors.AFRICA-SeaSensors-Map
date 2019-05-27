@@ -103,7 +103,6 @@ function lineSource(centers, distanceInKm) {
   }
  };
 }
-
 //counter card
 const numOfSensors = Object.keys(coordinates).length;
 document.getElementById('number-sensor').innerHTML = numOfSensors;
@@ -112,6 +111,7 @@ document.getElementById('number-sensor').innerHTML = numOfSensors;
 const blastRecorded = Object.keys(blastData.features).length;
 document.getElementById('number-detected').innerHTML = blastRecorded;
 
+var time = blastData.features['Time of Day'];
 map.on('load', function() {
  const zoomControls = new mapboxgl.NavigationControl();
  map.addControl(zoomControls, 'bottom-right');
