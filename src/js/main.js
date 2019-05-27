@@ -22,8 +22,6 @@ const set = new Set(
  blastData.features.map(f => applyPrecision(f.geometry.coordinates).join(','))
 );
 const coordinates = [...set].map(c => c.split(',').map(cstr => Number(cstr)));
-console.log(coordinates);
-
 function circlesSource(centers, radiusInKm, points = 64) {
  const features = centers.map(center => {
   const coords = {
@@ -105,21 +103,6 @@ function lineSource(centers, distanceInKm) {
  };
 }
 
-var filterGroup = document.getElementById('filter-group');
-var inputs = filterGroup.getElementsByTagName('input');
-//Add onclick to each function
-for (var i = 0, len = inputs.length; i < len; i++) {
- if (inputs[i].type === 'checkbox') {
-  inputs[i].onclick = function() {
-   if (this.checked) {
-    console.log(this.value);
-   } else {
-    console.log(this.value + ' unchecked ');
-   }
-  };
- }
-}
-
 const numOfSensors = Object.keys(coordinates).length;
 document.getElementById('number-sensor').innerHTML = numOfSensors;
 
@@ -154,17 +137,36 @@ map.on('load', function() {
    'fill-opacity': 0.6
   }
  });
- map.addLayer({
-  id: 'route',
-  type: 'line',
-  source: 'lines',
-  layout: {
-   'line-join': 'round',
-   'line-cap': 'round'
-  },
-  paint: {
-   'line-color': '#1798A6',
-   'line-width': 1
+
+ var filterGroup = document.getElementById('filter-group');
+ var inputs = filterGroup.getElementsByTagName('input');
+ //Add onclick to each function
+ for (var i = 0, len = inputs.length; i < len; i++) {
+  if (inputs[i].type === 'checkbox') {
+   inputs[i].onclick = onClick;
   }
- });
+ }
+
+ //set filter on this function to return coordinates associated with value
+ function onClick() {
+  if (this.checked) {
+   map.addLayer({
+    id: 'route',
+    type: 'line',
+    source: 'lines',
+    layout: {
+     'line-join': 'round',
+     'line-cap': 'round'
+    },
+    paint: {
+     'line-color': '#1798A6',
+     'line-width': 1
+    }
+   });
+   console.log(this.value);
+  } else {
+   map.removeLayer('route');
+   console.log(this.value + ' unchecked ');
+  }
+ }
 });
