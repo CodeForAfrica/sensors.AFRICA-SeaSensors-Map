@@ -143,30 +143,30 @@ map.on('load', function() {
  //Add onclick to each function
  for (var i = 0, len = inputs.length; i < len; i++) {
   if (inputs[i].type === 'checkbox') {
+   inputs[i].checked = true;
    inputs[i].onclick = onClick;
   }
  }
-
  //set filter on this function to return coordinates associated with value
  function onClick() {
   if (this.checked) {
-   map.addLayer({
-    id: 'route',
-    type: 'line',
-    source: 'lines',
-    layout: {
-     'line-join': 'round',
-     'line-cap': 'round'
-    },
-    paint: {
-     'line-color': '#1798A6',
-     'line-width': 1
-    }
-   });
    console.log(this.value);
   } else {
-   map.removeLayer('route');
    console.log(this.value + ' unchecked ');
   }
  }
+
+ map.addLayer({
+  id: 'route',
+  type: 'line',
+  source: 'lines',
+  layout: {
+   'line-join': 'round',
+   'line-cap': 'round'
+  },
+  paint: {
+   'line-color': '#1798A6',
+   'line-width': 1
+  }
+ });
 });
