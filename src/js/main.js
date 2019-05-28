@@ -73,7 +73,7 @@ function lineSource(centers, distanceInKm) {
    .map(f => f.properties);
 
   features = features.concat(
-    properties.map(property => {
+   properties.map(property => {
     const bearing = property['Blast Bearing'];
     const distanceX =
      distanceInKm / (111.32 * Math.cos((center[1] * Math.PI) / 180));
@@ -95,8 +95,6 @@ function lineSource(centers, distanceInKm) {
    })
   );
  });
-
- console.log(features)
 
  return {
   type: 'geojson',
@@ -158,26 +156,24 @@ map.on('load', function() {
  const filterGroup = document.getElementById('filter-group');
  const inputs = filterGroup.querySelectorAll('input[type=checkbox]');
 
- const handleFilter = (e) => {
-    const checked = Array.from(inputs).filter(e => e.checked);
+ const handleFilter = e => {
+  const checked = Array.from(inputs).filter(e => e.checked);
 
-    // Combine filters for same property
-    const filters = [];
-    checked.forEach(checkbox => {
-        const filter = filters.find(f => f[1] === checkbox.name);
-        if (filter) {
-            filter.push(checkbox.value);
-        } else {
-            filters.push(['in', checkbox.name, checkbox.value]);
-        }
-    });
-    map.setFilter('route', ['all', ...filters]);
-   };
-
-   // Initialize
-    Array.from(inputs).forEach(input => {
-        input.checked = false;
-        input.onclick = handleFilter;
-    });
-
+  // Combine filters for same property
+  const filters = [];
+  checked.forEach(checkbox => {
+   const filter = filters.find(f => f[1] === checkbox.name);
+   if (filter) {
+    filter.push(checkbox.value);
+   } else {
+    filters.push(['in', checkbox.name, checkbox.value]);
+   }
+  });
+  map.setFilter('route', ['all', ...filters]);
+ };
+ //Inital state
+ Array.from(inputs).forEach(input => {
+  input.checked = true;
+  input.onclick = handleFilter;
+ });
 });
