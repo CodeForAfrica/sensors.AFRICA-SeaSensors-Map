@@ -137,7 +137,6 @@ map.on('load', function() {
    'fill-opacity': 0.6
   }
  });
-
  map.addLayer({
   id: 'route',
   type: 'line',
@@ -151,6 +150,7 @@ map.on('load', function() {
    'line-width': 1
   }
  });
+
  var filterGroup = document.getElementById('filter-group');
  var inputs = filterGroup.getElementsByTagName('input');
  for (var i = 0, len = inputs.length; i < len; i++) {
@@ -161,19 +161,12 @@ map.on('load', function() {
  }
 
  function onClick() {
-  // Set the filter to populate features into the layer.
   if (this.checked) {
-   map.setFilter('route', [
-    'all',
-    ['==', 'value', 'Spring'],
-    ['==', 'value', 'Normal'],
-    ['==', 'value', 'Falling'],
-    ['==', 'value', 'High'],
-    ['==', 'value', 'AM'],
-    ['==', 'value', 'PM']
-   ]);
+   //map.setFilter('route', ['all', ['==', 'value', '']]);
+   map.setLayoutProperty('route', 'visibility', 'visible');
    console.log(this.value);
   } else {
+   map.setLayoutProperty('route', 'visibility', 'none');
    console.log(this.value + ' unchecked ');
   }
  }
