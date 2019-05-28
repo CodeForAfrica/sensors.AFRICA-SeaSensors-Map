@@ -138,24 +138,6 @@ map.on('load', function() {
   }
  });
 
- var filterGroup = document.getElementById('filter-group');
- var inputs = filterGroup.getElementsByTagName('input');
- //Add onclick to each function
- for (var i = 0, len = inputs.length; i < len; i++) {
-  if (inputs[i].type === 'checkbox') {
-   inputs[i].checked = true;
-   inputs[i].onclick = onClick;
-  }
- }
- //set filter on this function to return coordinates associated with value
- function onClick() {
-  if (this.checked) {
-   console.log(this.value);
-  } else {
-   console.log(this.value + ' unchecked ');
-  }
- }
-
  map.addLayer({
   id: 'route',
   type: 'line',
@@ -169,4 +151,30 @@ map.on('load', function() {
    'line-width': 1
   }
  });
+ var filterGroup = document.getElementById('filter-group');
+ var inputs = filterGroup.getElementsByTagName('input');
+ for (var i = 0, len = inputs.length; i < len; i++) {
+  if (inputs[i].type === 'checkbox') {
+   inputs[i].checked = true;
+   inputs[i].onclick = onClick;
+  }
+ }
+
+ function onClick() {
+  // Set the filter to populate features into the layer.
+  if (this.checked) {
+   map.setFilter('route', [
+    'all',
+    ['==', 'value', 'Spring'],
+    ['==', 'value', 'Normal'],
+    ['==', 'value', 'Falling'],
+    ['==', 'value', 'High'],
+    ['==', 'value', 'AM'],
+    ['==', 'value', 'PM']
+   ]);
+   console.log(this.value);
+  } else {
+   console.log(this.value + ' unchecked ');
+  }
+ }
 });
