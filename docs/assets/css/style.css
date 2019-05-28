@@ -61,7 +61,7 @@ h5 {
 }
 #filter {
  position: fixed;
- top: 12rem;
+ top: 0rem;
  left: 3rem;
  bottom: 2rem;
  background-color: white;
@@ -83,6 +83,15 @@ h5 {
  margin: 0.5rem;
  padding-top: 0.5rem;
 }
+#filter-group {
+ margin-left: 10px;
+}
 .filter-title {
  color: grey;
+}
+
+input[type='checkbox'] {
+ -webkit-appearance: radio; /* Safari, Chrome, Opera */
+ -moz-appearance: radio; /* Firefox */
+ -ms-appearance: radio; /* Not supported */
 }
