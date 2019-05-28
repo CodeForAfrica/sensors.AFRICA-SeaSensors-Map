@@ -171,6 +171,7 @@ map.on('load', function() {
   });
   map.setFilter('route', ['all', ...filters]);
  };
+
  //Inital state
  Array.from(inputs).forEach(input => {
   input.checked = true;
