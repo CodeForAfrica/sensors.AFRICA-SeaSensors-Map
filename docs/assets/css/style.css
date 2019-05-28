@@ -32,6 +32,7 @@ h5 {
  right: 0;
  height: 100px;
  margin-top: 3rem;
+ margin-right: 2rem;
  width: 22rem;
  overflow: auto;
  display: flex;
@@ -80,6 +81,8 @@ h5 {
 #filter-box {
  width: 100%;
  background-color: white;
+ overflow: auto;
+ padding-bottom: 1rem;
 }
 .title-div {
  display: inline-block;
@@ -93,14 +96,19 @@ h5 {
  padding-top: 0.5rem;
 }
 #filter-group {
- margin-left: 10px;
+ margin-left: 1.5rem;
+ margin-right: 1.5rem;
 }
 .filter-title {
  color: grey;
 }
-
 input[type='checkbox'] {
  -webkit-appearance: radio; /* Safari, Chrome, Opera */
  -moz-appearance: radio; /* Firefox */
  -ms-appearance: radio; /* Not supported */
+}
+
+.label {
+ font-size: 0.9em;
+ color: grey;
 }
