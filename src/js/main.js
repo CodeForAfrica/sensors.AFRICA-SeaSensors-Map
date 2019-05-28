@@ -66,14 +66,15 @@ function circlesSource(centers, radiusInKm, points = 64) {
 function lineSource(centers, distanceInKm) {
  let features = [];
  centers.forEach(center => {
-  const bearings = blastData.features
+  const properties = blastData.features
    .filter(
     f => applyPrecision(f.geometry.coordinates).join(',') == center.join(',')
    )
-   .map(f => f.properties['Blast Bearing']);
+   .map(f => f.properties);
 
   features = features.concat(
-   bearings.map(bearing => {
+    properties.map(property => {
+    const bearing = property['Blast Bearing'];
     const distanceX =
      distanceInKm / (111.32 * Math.cos((center[1] * Math.PI) / 180));
     const distanceY = distanceInKm / 110.574;
@@ -85,6 +86,7 @@ function lineSource(centers, distanceInKm) {
 
     return {
      type: 'Feature',
+     properties: property,
      geometry: {
       type: 'LineString',
       coordinates: [center, [center[0] + x, center[1] + y]]
@@ -93,6 +95,8 @@ function lineSource(centers, distanceInKm) {
    })
   );
  });
+
+ console.log(features)
 
  return {
   type: 'geojson',
@@ -151,30 +155,29 @@ map.on('load', function() {
    'line-width': 1
   }
  });
- var filterGroup = document.getElementById('filter-group');
- var inputs = filterGroup.getElementsByTagName('input');
- for (var i = 0, len = inputs.length; i < len; i++) {
-  if (inputs[i].type === 'checkbox') {
-   inputs[i].checked = true;
-   inputs[i].onclick = onClick;
-  }
- }
+ const filterGroup = document.getElementById('filter-group');
+ const inputs = filterGroup.querySelectorAll('input[type=checkbox]');
 
- function onClick() {
-  // Set the filter to populate features into the layer.
-  if (this.checked) {
-   map.setFilter('route', [
-    'all',
-    ['==', 'value', 'Spring'],
-    ['==', 'value', 'Normal'],
-    ['==', 'value', 'Falling'],
-    ['==', 'value', 'High'],
-    ['==', 'value', 'AM'],
-    ['==', 'value', 'PM']
-   ]);
-   console.log(this.value);
-  } else {
-   console.log(this.value + ' unchecked ');
-  }
- }
+ const handleFilter = (e) => {
+    const checked = Array.from(inputs).filter(e => e.checked);
+
+    // Combine filters for same property
+    const filters = [];
+    checked.forEach(checkbox => {
+        const filter = filters.find(f => f[1] === checkbox.name);
+        if (filter) {
+            filter.push(checkbox.value);
+        } else {
+            filters.push(['in', checkbox.name, checkbox.value]);
+        }
+    });
+    map.setFilter('route', ['all', ...filters]);
+   };
+
+   // Initialize
+    Array.from(inputs).forEach(input => {
+        input.checked = false;
+        input.onclick = handleFilter;
+    });
+
 });
