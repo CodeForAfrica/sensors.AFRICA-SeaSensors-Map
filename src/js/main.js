@@ -4,8 +4,8 @@ mapboxgl.accessToken = process.env.MapboxAccessToken;
 var map = new mapboxgl.Map({
  container: 'map',
  style: 'mapbox://styles/codeforafrica/cju18pxjf12yj1gp7qhdmgicd',
- center: [39.412, -5.21],
- zoom: 8.67
+ center: [39.288, -5.264],
+ zoom: 8.0
 });
 
 //Karim:  Degree precision
