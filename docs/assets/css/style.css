@@ -112,3 +112,15 @@ input[type='checkbox'] {
  font-size: 0.9em;
  color: grey;
 }
+
+.mapboxgl-ctrl-group {
+ height: 70pt;
+ width: 35pt;
+ margin: 0 10pt 20pt 0 !important;
+ border-radius: 0;
+}
+
+.mapboxgl-ctrl-group > .mapboxgl-ctrl-icon {
+ width: 35pt;
+ height: 35pt;
+}

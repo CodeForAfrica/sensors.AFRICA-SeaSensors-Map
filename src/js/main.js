@@ -113,7 +113,7 @@ const blastRecorded = Object.keys(blastData.features).length;
 document.getElementById('number-detected').innerHTML = blastRecorded;
 
 map.on('load', function() {
- const zoomControls = new mapboxgl.NavigationControl();
+ const zoomControls = new mapboxgl.NavigationControl({ showCompass: false });
  map.addControl(zoomControls, 'bottom-right');
  map.addLayer({
   id: 'points',
