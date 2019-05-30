@@ -144,5 +144,4 @@ typings/
 
 # End of https://www.gitignore.io/api/node,linux,macos,visualstudiocode
 
-# compiled files
-docs/assets/js/bundle.js
+
