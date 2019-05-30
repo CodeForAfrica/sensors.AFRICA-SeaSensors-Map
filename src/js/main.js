@@ -4,8 +4,8 @@ mapboxgl.accessToken = process.env.MapboxAccessToken;
 var map = new mapboxgl.Map({
  container: 'map',
  style: 'mapbox://styles/codeforafrica/cju18pxjf12yj1gp7qhdmgicd',
- center: [39.299, -5.368],
- zoom: 7.66
+ center: [39.288, -5.264],
+ zoom: 8.0
 });
 
 //Karim:  Degree precision
@@ -113,7 +113,7 @@ const blastRecorded = Object.keys(blastData.features).length;
 document.getElementById('number-detected').innerHTML = blastRecorded;
 
 map.on('load', function() {
- const zoomControls = new mapboxgl.NavigationControl();
+ const zoomControls = new mapboxgl.NavigationControl({ showCompass: false });
  map.addControl(zoomControls, 'bottom-right');
  map.addLayer({
   id: 'points',
