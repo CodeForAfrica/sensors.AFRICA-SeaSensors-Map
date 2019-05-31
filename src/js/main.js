@@ -173,7 +173,7 @@ map.on('load', function() {
 
  //Inital state
  Array.from(inputs).forEach(input => {
-  input.checked = true;
+  input.checked = false;
   input.onclick = handleFilter;
  });
 });
