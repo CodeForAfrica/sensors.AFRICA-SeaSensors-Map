@@ -173,7 +173,42 @@ map.on('load', function() {
 
  //Inital state
  Array.from(inputs).forEach(input => {
-  input.checked = true;
+  input.checked = false;
   input.onclick = handleFilter;
  });
+
+ //Filter counts for Spring and Normal Tides
+ const springTides = [];
+ const normalTides = [];
+ blastData.features.forEach(item => {
+  if (item.properties['Tide'] == 'Spring') {
+   springTides.push(item.properties['Tide']);
+  } else if (item.properties['Tide'] == 'Normal') {
+   normalTides.push(item.properties['Tide']);
+  } else return null;
+ });
+ console.log(springTides.length);
+ console.log(normalTides.length);
+
+ function addCount() {
+  if (
+   document.getElementsByName('Tide').value === 'Spring' &&
+   document.getElementsByTagName('input').checked == true
+  ) {
+   document.getElementById('spring').innerHTML =
+    springTides.length + ' blasts recorded during a Spring Tide';
+  } else if (
+   document.getElementsByName('Tide').value === 'Normal' &&
+   document.getElementsByTagName('input').checked == true
+  ) {
+   document.getElementById('normal').innerHTML =
+    normalTides.length + ' blasts recorded during a Normal Tide';
+  } else return null;
+ }
+
+ addCount();
+ //document.getElementById('spring').innerHTML =
+ //springTides.length + ' blasts recorded during a Spring Tide';
+ //document.getElementById('normal').innerHTML =
+ //normalTides.length + ' blasts recorded during a Normal Tide';
 });

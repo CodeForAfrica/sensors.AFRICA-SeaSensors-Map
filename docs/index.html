@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
  <head>
   <meta charset="utf-8" />
   <title>SeaSensors.AFRICA</title>
@@ -69,14 +69,34 @@
     </div>
     <div id="filter-group">
      <h4 class="filter-title">Tide</h4>
-     <label class="label">
-      <input type="checkbox" name="Tide" value="Spring" />
-      Spring </label
-     ><br />
-     <label class="label">
-      <input type="checkbox" name="Tide" value="Normal" />
-      Normal
-     </label>
+
+     <!--Get count of spring ans normal tides-->
+     <div class="tide-container">
+      <div class="tides">
+       <label class="label">
+        <input
+         type="checkbox"
+         name="Tide"
+         value="Spring"
+         onclick="addCount()"
+        />
+        Spring </label
+       ><br />
+       <label class="label">
+        <input type="checkbox" name="Tide" value="Normal" />
+        Normal
+       </label>
+      </div>
+
+      <div class="tide-count">
+       <p class="count-content">
+        <span id="spring"></span> <br />
+        <span id="normal"></span>
+       </p>
+      </div>
+     </div>
+
+     <!--Tidal state-->
      <h4 class="filter-title">Tidal state</h4>
      <label class="label">
       <input type="checkbox" name="Tidal State" value="Falling" />
