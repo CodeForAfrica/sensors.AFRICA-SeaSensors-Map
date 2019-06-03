@@ -88,7 +88,7 @@ export function lineSource(
     const properties = data.features
       .filter(
         f =>
-          applyPrecision(f.geometry.coordinates).join(',') == center.join(',')
+          applyPrecision(f.geometry.coordinates).join(',') === center.join(',')
       )
       .map(f => f.properties);
 

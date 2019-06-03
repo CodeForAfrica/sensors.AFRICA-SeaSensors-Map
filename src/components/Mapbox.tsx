@@ -7,11 +7,10 @@ import ReactMapboxGl, {
 } from 'react-mapbox-gl';
 
 import { circlesSource, uniqueCoordinates, lineSource } from '../utils/data';
-import { FilterValue } from './Filter.jsx';
+import { FilterValue } from './Filter';
 
 const Map = ReactMapboxGl({
-  accessToken:
-    'pk.eyJ1Ijoia2FheXIxbSIsImEiOiJjamtsaXF6MzMwYnRuM3dxcjRrbm1ieDVxIn0.D1swnEH7sufUKGAz3rWXKQ'
+  accessToken: process.env.REACT_APP_MAPBOX_ACCESS_TOKEN!
 });
 
 interface Props {
@@ -20,7 +19,7 @@ interface Props {
 }
 
 function Mapbox({ data, filters }: Props) {
-  const coordinates = uniqueCoordinates(data);
+  const sensorCoordinates = uniqueCoordinates(data);
   const [blastLinesFilter, setBlastLinesFilter] = useState(['all'] as any[]);
 
   useEffect(() => {
@@ -57,14 +56,14 @@ function Mapbox({ data, filters }: Props) {
           'circle-opacity': 0.8
         }}
       >
-        {coordinates.map(coordinate => (
-          <Feature coordinates={coordinate} />
+        {sensorCoordinates.map(coordinates => (
+          <Feature coordinates={coordinates} />
         ))}
       </Layer>
 
       <Source
         id="blast_radius_source"
-        geoJsonSource={circlesSource(coordinates, 30)}
+        geoJsonSource={circlesSource(sensorCoordinates, 30)}
       />
       <Layer
         id="blast_radius"
@@ -78,7 +77,7 @@ function Mapbox({ data, filters }: Props) {
 
       <Source
         id="blast_lines_source"
-        geoJsonSource={lineSource(data, coordinates, 30)}
+        geoJsonSource={lineSource(data, sensorCoordinates, 30)}
       />
 
       <Layer
