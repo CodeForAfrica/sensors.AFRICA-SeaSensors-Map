@@ -6,7 +6,6 @@ import ReactMapboxGl, {
   Layer
 } from 'react-mapbox-gl';
 
-import blastData from '../data/blasts.geo.json';
 import { circlesSource, uniqueCoordinates, lineSource } from '../utils/data';
 import { FilterValue } from './Filter.jsx';
 
@@ -16,11 +15,12 @@ const Map = ReactMapboxGl({
 });
 
 interface Props {
+  data: any;
   filters: Array<FilterValue>;
 }
 
-function Mapbox({ filters }: Props) {
-  const coordinates = uniqueCoordinates(blastData);
+function Mapbox({ data, filters }: Props) {
+  const coordinates = uniqueCoordinates(data);
   const [blastLinesFilter, setBlastLinesFilter] = useState(['all'] as any[]);
 
   useEffect(() => {
@@ -78,7 +78,7 @@ function Mapbox({ filters }: Props) {
 
       <Source
         id="blast_lines_source"
-        geoJsonSource={lineSource(blastData, coordinates, 30)}
+        geoJsonSource={lineSource(data, coordinates, 30)}
       />
 
       <Layer
