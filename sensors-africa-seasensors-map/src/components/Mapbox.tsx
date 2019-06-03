@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactMapboxGl, {
   ZoomControl,
   Source,
@@ -8,14 +8,34 @@ import ReactMapboxGl, {
 
 import blastData from '../data/blasts.geo.json';
 import { circlesSource, uniqueCoordinates, lineSource } from '../utils/data';
+import { FilterValue } from './Filter.jsx';
 
 const Map = ReactMapboxGl({
   accessToken:
     'pk.eyJ1Ijoia2FheXIxbSIsImEiOiJjamtsaXF6MzMwYnRuM3dxcjRrbm1ieDVxIn0.D1swnEH7sufUKGAz3rWXKQ'
 });
 
-function Mapbox() {
+interface Props {
+  filters: Array<FilterValue>;
+}
+
+function Mapbox({ filters }: Props) {
   const coordinates = uniqueCoordinates(blastData);
+  const [blastLinesFilter, setBlastLinesFilter] = useState(['all'] as any[]);
+
+  useEffect(() => {
+    const filtersToApply: any[] = ['all'];
+    filters.forEach(filter => {
+      const found = filtersToApply.find(f => f[1] === filter[0]);
+      if (found) {
+        found.push(filter[1]);
+      } else {
+        filtersToApply.push(['in', ...filter]);
+      }
+    });
+    setBlastLinesFilter(filtersToApply);
+  }, [filters]);
+
   return (
     <Map
       style="mapbox://styles/codeforafrica/cju18pxjf12yj1gp7qhdmgicd"
@@ -60,6 +80,7 @@ function Mapbox() {
         id="blast_lines_source"
         geoJsonSource={lineSource(blastData, coordinates, 30)}
       />
+
       <Layer
         id="blast_lines"
         type="line"
@@ -72,6 +93,7 @@ function Mapbox() {
           'line-color': '#1798A6',
           'line-width': 1
         }}
+        filter={blastLinesFilter}
       />
     </Map>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -40,17 +40,38 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-interface Props {}
+export type FilterValue = [string, any];
 
-export default function Filter({  }: Props) {
+interface Props {
+  onFilter: (filter: Array<FilterValue>) => void;
+}
+
+export default function Filter({ onFilter }: Props) {
   const classes = useStyles();
+  const filterGroupRef = createRef<HTMLDivElement>();
+
+  const handleFilter = () => {
+    if (filterGroupRef.current) {
+      const inputs = filterGroupRef.current.querySelectorAll(
+        'input[type=checkbox]'
+      );
+      const checked = Array.from(inputs).filter(
+        (element: any) => element.checked
+      ) as HTMLInputElement[];
+      onFilter(checked.map(e => [e.name, e.value]));
+    }
+  };
 
   return (
     <div className={classes.root}>
       <div className={classes.header}>
         <h2>Filters</h2>
       </div>
-      <div className={classes.filterGroup}>
+      <div
+        ref={filterGroupRef}
+        className={classes.filterGroup}
+        onClick={handleFilter}
+      >
         <h4 className={classes.filterTitle}>Tide</h4>
         <label className={classes.filterLabel}>
           <input type="checkbox" name="Tide" value="Spring" />
