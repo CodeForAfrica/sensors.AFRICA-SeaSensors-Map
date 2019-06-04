@@ -50,7 +50,6 @@ function Mapbox({ data, filters }: Props) {
       <Layer
         id="blast_sensor_location"
         type="circle"
-        coordinates
         paint={{
           'circle-color': '#463354',
           'circle-opacity': 0.8
