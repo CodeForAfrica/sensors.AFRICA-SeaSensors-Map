@@ -13,6 +13,10 @@ const Map = ReactMapboxGl({
   accessToken: process.env.REACT_APP_MAPBOX_ACCESS_TOKEN!
 });
 
+const style = {
+  mapboxStyle: 'mapbox://styles/codeforafrica/cju18pxjf12yj1gp7qhdmgicd'
+};
+
 interface Props {
   data: any;
   filters: Array<FilterValue>;
@@ -37,7 +41,7 @@ function Mapbox({ data, filters }: Props) {
 
   return (
     <Map
-      style="mapbox://styles/codeforafrica/cju18pxjf12yj1gp7qhdmgicd"
+      style={style.mapboxStyle}
       center={[39.299, -5.368]}
       zoom={[7.99]}
       containerStyle={{
