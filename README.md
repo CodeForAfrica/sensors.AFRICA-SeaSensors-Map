@@ -19,6 +19,5 @@ Run the following commands to get started:
 
 ```
   yarn
-  yarn build
   yarn start
 ```
