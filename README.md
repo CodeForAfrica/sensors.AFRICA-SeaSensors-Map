@@ -18,6 +18,8 @@ Our primary goal of the map is to:
 Run the following commands to get started:
 
 ```
+  git clone https://github.com/CodeForAfricaLabs/sensors.AFRICA-SeaSensors-Map.git
+  cd sensors.AFRICA-SeaSensors-Map
   yarn
   yarn start
 ```
